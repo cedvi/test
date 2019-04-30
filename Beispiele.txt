@@ -1,0 +1,121 @@
+int ggt(int a, int b) { 
+	int temp; 
+	if(b > a) { 
+		temp = a; 
+        a = b; 
+        b = temp; 
+	} 
+    while(a != 0) { 
+		temp = a; 
+        a = a % b; 
+        b = temp; 
+	} 
+	return b; 
+} 
+        
+int main() { 
+	int a, b, r; 
+    a = 3528; 
+    b = 3780; 
+    r = ggt(a, b); 
+    return r; 
+}
+
+
+
+
+int fak(int n) { 
+	if(n == 0) 
+		return 1; 
+	return n*fak(n - 1); 
+} 
+        
+int main() { 
+	return fak(6); 
+}
+
+
+
+
+int prim(int n) { 
+	int divisors, i; 
+    divisors = 0; 
+          
+    i = 2; 
+    while (i < n) { 
+		if (n % i == 0) 
+			divisors = divisors + 1; 
+		i = i + 1; 
+	} 
+          
+    if (divisors == 0 && n >= 2) { 
+		return 1; 
+	} else { 
+		return 0; 
+	} 
+} 
+        
+int main() { 
+	int prims; 
+    prims = 0; 
+	prims = prims + prim(997); 
+	prims = prims + prim(120); 
+	prims = prims + prim(887); 
+	prims = prims + prim(21); 
+	prims = prims + prim(379); 
+	prims = prims + prim(380); 
+	prims = prims + prim(757); 
+	prims = prims + prim(449); 
+	prims = prims + prim(5251); 
+	return prims; 
+}
+
+
+//-------------FEHLER
+
+int ggt(int a, int b) { 
+	return b; 
+} 
+        
+int main() { 
+	int a, b, r; 
+	a = 3528; 
+	b = 3780; 
+	r = ggt(a, b, a); 
+	return r; 
+}
+
+
+
+
+int ggt(int a, int b) { 
+	return c; 
+} 
+        
+int main() { 
+	int a, b, r; 
+	a = 3528; 
+	b = 3780; 
+	r = ggt(a, b); 
+	return r; 
+}
+
+
+
+
+
+
+
+
+int ggt(int a, int b) { 
+	int a; 
+	return b; 
+} 
+        
+int main() { 
+	int a, b, r; 
+	a = 3528; 
+	b = 3780; 
+	r = ggt(a, b); 
+	return r; 
+}
